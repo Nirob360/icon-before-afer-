@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap');
+*, *::before , *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.btn{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    ul{
+        display: flex;
+        list-style-type: none;
+        li{
+          width: 28px;
+          height: 28px;
+          border: dotted 2px #2e86de;
+          margin: 0 10px;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          i{
+              font-size: 20px;
+              color: #2e86de;
+          }
+          
+        }
+        li::before{
+            content:'' ;
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-color: #2e86de;
+            border-radius : 50%;
+            transition: .4s linear;
+            z-index: -1;
+            opacity: 0;
+         }
+         li:hover::before{
+             transform: scale(.8);
+             opacity: 1;
+         }
+         li:hover i{
+             color:#fff;
+         }
+
+    }
+}
+
+
